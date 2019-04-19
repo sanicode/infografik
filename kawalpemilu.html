@@ -1,0 +1,235 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
+        <title>Product example · Bootstrap</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/product/">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+            #bar {
+                width:100%;
+                height: 300px;
+            }
+            #pie {
+                width:100%;
+                height: 300px;
+            }
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="https://getbootstrap.com/docs/4.3/examples/product/product.css" rel="stylesheet">
+        <!-- Resources -->
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!-- Chart code -->
+        <script>
+            var time = $.now();
+            $.getJSON("https://kawal-c1.appspot.com/api/c/0?" + time, function (data) {
+                var items = [];
+                var pas1 = 0;
+                var pas2 = 0;
+                pas1 = pas1 + data['data']['1']['sum']['pas1'];
+                pas1 = pas1 + data['data']['6728']['sum']['pas1'];
+                pas1 = pas1 + data['data']['12920']['sum']['pas1'];
+                pas1 = pas1 + data['data']['14086']['sum']['pas1'];
+                pas1 = pas1 + data['data']['15885']['sum']['pas1'];
+                pas1 = pas1 + data['data']['17404']['sum']['pas1'];
+                pas1 = pas1 + data['data']['20802']['sum']['pas1'];
+
+                pas1 = pas1 + data['data']['22328']['sum']['pas1'];
+                pas1 = pas1 + data['data']['24993']['sum']['pas1'];
+                pas1 = pas1 + data['data']['25405']['sum']['pas1'];
+                pas1 = pas1 + data['data']['25823']['sum']['pas1'];
+                pas1 = pas1 + data['data']['26141']['sum']['pas1'];
+                pas1 = pas1 + data['data']['32676']['sum']['pas1'];
+                pas1 = pas1 + data['data']['41863']['sum']['pas1'];
+                pas1 = pas1 + data['data']['42385']['sum']['pas1'];
+                pas1 = pas1 + data['data']['51578']['sum']['pas1'];
+                pas1 = pas1 + data['data']['53241']['sum']['pas1'];
+                pas1 = pas1 + data['data']['54020']['sum']['pas1'];
+                pas1 = pas1 + data['data']['55065']['sum']['pas1'];
+                pas1 = pas1 + data['data']['58285']['sum']['pas1'];
+                pas1 = pas1 + data['data']['60371']['sum']['pas1'];
+                pas1 = pas1 + data['data']['61965']['sum']['pas1'];
+                pas1 = pas1 + data['data']['64111']['sum']['pas1'];
+                pas1 = pas1 + data['data']['65702']['sum']['pas1'];
+                pas1 = pas1 + data['data']['67393']['sum']['pas1'];
+                pas1 = pas1 + data['data']['69268']['sum']['pas1'];
+                pas1 = pas1 + data['data']['72551']['sum']['pas1'];
+                pas1 = pas1 + data['data']['74716']['sum']['pas1'];
+                pas1 = pas1 + data['data']['75425']['sum']['pas1'];
+                pas1 = pas1 + data['data']['76096']['sum']['pas1'];
+
+                pas1 = pas1 + data['data']['77085']['sum']['pas1'];
+                pas1 = pas1 + data['data']['78203']['sum']['pas1'];
+                pas1 = pas1 + data['data']['81877']['sum']['pas1'];
+                pas1 = pas1 + data['data']['928068']['sum']['pas1'];
+
+                //pas2
+
+                pas2 = pas2 + data['data']['1']['sum']['pas2'];
+                pas2 = pas2 + data['data']['6728']['sum']['pas2'];
+                pas2 = pas2 + data['data']['12920']['sum']['pas2'];
+                pas2 = pas2 + data['data']['14086']['sum']['pas2'];
+                pas2 = pas2 + data['data']['15885']['sum']['pas2'];
+                pas2 = pas2 + data['data']['17404']['sum']['pas2'];
+                pas2 = pas2 + data['data']['20802']['sum']['pas2'];
+
+                pas2 = pas2 + data['data']['22328']['sum']['pas2'];
+                pas2 = pas2 + data['data']['24993']['sum']['pas2'];
+                pas2 = pas2 + data['data']['25405']['sum']['pas2'];
+                pas2 = pas2 + data['data']['25823']['sum']['pas2'];
+                pas2 = pas2 + data['data']['26141']['sum']['pas2'];
+                pas2 = pas2 + data['data']['32676']['sum']['pas2'];
+                pas2 = pas2 + data['data']['41863']['sum']['pas2'];
+                pas2 = pas2 + data['data']['42385']['sum']['pas2'];
+                pas2 = pas2 + data['data']['51578']['sum']['pas2'];
+                pas2 = pas2 + data['data']['53241']['sum']['pas2'];
+                pas2 = pas2 + data['data']['54020']['sum']['pas2'];
+                pas2 = pas2 + data['data']['55065']['sum']['pas2'];
+                pas2 = pas2 + data['data']['58285']['sum']['pas2'];
+                pas2 = pas2 + data['data']['60371']['sum']['pas2'];
+                pas2 = pas2 + data['data']['61965']['sum']['pas2'];
+                pas2 = pas2 + data['data']['64111']['sum']['pas2'];
+                pas2 = pas2 + data['data']['65702']['sum']['pas2'];
+                pas2 = pas2 + data['data']['67393']['sum']['pas2'];
+                pas2 = pas2 + data['data']['69268']['sum']['pas2'];
+                pas2 = pas2 + data['data']['72551']['sum']['pas2'];
+                pas2 = pas2 + data['data']['74716']['sum']['pas2'];
+                pas2 = pas2 + data['data']['75425']['sum']['pas2'];
+                pas2 = pas2 + data['data']['76096']['sum']['pas2'];
+
+                pas2 = pas2 + data['data']['77085']['sum']['pas2'];
+                pas2 = pas2 + data['data']['78203']['sum']['pas2'];
+                pas2 = pas2 + data['data']['81877']['sum']['pas2'];
+                pas2 = pas2 + data['data']['928068']['sum']['pas2'];
+
+                console.log("Jokowi : " + pas1 + " Prabowo : " + pas2);
+                //amchart
+                am4core.ready(function () {
+
+                    // Themes begin
+                    am4core.useTheme(am4themes_animated);
+                    // Themes end
+
+                    // Create chart instance
+                    var chart = am4core.create("bar", am4charts.XYChart);
+
+                    // Add data
+                    chart.data = [{
+                            "name": "Jokowi & Amin",
+                            "points": pas1,
+                            "color": chart.colors.next(),
+                            "bullet": "http://www.iklancapres.id/gambar/capres/capres-jokowi-ma-ruf-amin-1-l.png"
+                        }, {
+                            "name": "Prabowo & Sandi",
+                            "points": pas2,
+                            "color": chart.colors.next(),
+                            "bullet": "https://cdn.detik.net.id/pemilu/embed/quickcount/images/capres-02@2x.png?v=3cabf1d9"
+                        }, ];
+
+                    // Create axes
+                    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+                    categoryAxis.dataFields.category = "name";
+                    categoryAxis.renderer.grid.template.disabled = true;
+                    categoryAxis.renderer.minGridDistance = 30;
+                    categoryAxis.renderer.inside = true;
+                    categoryAxis.renderer.labels.template.fill = am4core.color("#fff");
+                    categoryAxis.renderer.labels.template.fontSize = 20;
+
+                    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                    valueAxis.renderer.grid.template.strokeDasharray = "4,4";
+                    valueAxis.renderer.labels.template.disabled = true;
+                    valueAxis.min = 0;
+
+                    // Do not crop bullets
+                    chart.maskBullets = false;
+
+                    // Remove padding
+                    chart.paddingBottom = 0;
+
+                    // Create series
+                    var series = chart.series.push(new am4charts.ColumnSeries());
+                    series.dataFields.valueY = "points";
+                    series.dataFields.categoryX = "name";
+                    series.columns.template.propertyFields.fill = "color";
+                    series.columns.template.propertyFields.stroke = "color";
+                    series.columns.template.column.cornerRadiusTopLeft = 15;
+                    series.columns.template.column.cornerRadiusTopRight = 15;
+                    series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/b]";
+
+                    // Add bullets
+                    var bullet = series.bullets.push(new am4charts.Bullet());
+                    var image = bullet.createChild(am4core.Image);
+                    image.horizontalCenter = "middle";
+                    image.verticalCenter = "bottom";
+                    image.dy = 20;
+                    image.y = am4core.percent(100);
+                    image.propertyFields.href = "bullet";
+                    image.tooltipText = series.columns.template.tooltipText;
+                    image.propertyFields.fill = "color";
+                    image.filters.push(new am4core.DropShadowFilter());
+
+
+                    //pie
+                    var chart = am4core.create("pie", am4charts.PieChart);
+
+// Add data
+                    chart.data = [{
+                            "country": "Jokowi",
+                            "litres": pas1
+                        }, {
+                            "country": "Prabowo",
+                            "litres": pas2
+                        }, ];
+
+// Add and configure Series
+                    var pieSeries = chart.series.push(new am4charts.PieSeries());
+                    pieSeries.dataFields.value = "litres";
+                    pieSeries.dataFields.category = "country";
+                    pieSeries.slices.template.stroke = am4core.color("#fff");
+                    pieSeries.slices.template.strokeWidth = 2;
+                    pieSeries.slices.template.strokeOpacity = 1;
+
+// This creates initial animation
+                    pieSeries.hiddenState.properties.opacity = 1;
+                    pieSeries.hiddenState.properties.endAngle = -90;
+                    pieSeries.hiddenState.properties.startAngle = -90;
+                }); // end am4core.ready()         
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1><center>InfoGrafik KawalPemilu.Org</center></h1>
+            <div id="bar"></div>
+            <div id="pie"></div>
+        </div>
+    </body>
+</html>
